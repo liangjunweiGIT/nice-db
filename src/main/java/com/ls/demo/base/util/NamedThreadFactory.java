@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * Authors:
- *   wuhua <wq163@163.com> , tech.plat@zuche.com <killme2008@gmail.com>
+ *   liangjunweiemail@163.com
  */
 package com.ls.demo.base.util;
 

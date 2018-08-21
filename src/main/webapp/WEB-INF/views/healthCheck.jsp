@@ -1,2 +1,2 @@
 <%@ page session="false"%>
-<html> wyy open node-springboot-demo health check success!</html>
+<html> wuyanyu open node-springboot-demo health check success!</html>

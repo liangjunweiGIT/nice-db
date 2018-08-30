@@ -7,6 +7,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
 import java.nio.channels.WritableByteChannel;
+import java.util.HashMap;
 
 /**
  * @Description:
@@ -25,8 +26,7 @@ public class MyClassLoader extends ClassLoader {
         File file = getClassFile(name);
         try {
             byte[] bytes = getClassBytes(file);
-            Class<?> c = this.defineClass(name, bytes, 0, bytes.length);
-            return c;
+            return this.defineClass(name, bytes, 0, bytes.length);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -35,8 +35,7 @@ public class MyClassLoader extends ClassLoader {
     }
 
     private File getClassFile(String name) {
-        File file = new File("F:/Person.class");
-        return file;
+        return new File("F:/Person.class");
     }
 
     private byte[] getClassBytes(File file) throws Exception {
@@ -57,7 +56,6 @@ public class MyClassLoader extends ClassLoader {
         }
 
         fis.close();
-
         return baos.toByteArray();
     }
 }

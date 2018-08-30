@@ -13,10 +13,12 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping(value="test")
 public class HealthCheck {
+    public static final String HEALTH_JSP="healthCheck";
+
     @RequestMapping(value="health")
     public String health(HttpServletRequest request){
         HttpSession session = request.getSession();
         session.setAttribute("test","test");
-        return "healthCheck";
+        return HEALTH_JSP;
     }
 }

@@ -3,14 +3,17 @@
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
-    <TITLE>XSSTEST</TITLE>
+    <TITLE>欢乐的五子棋哦</TITLE>
     <META NAME="Generator" CONTENT="7WX/AOP Framework">
     <META http-equiv="content-type" content="text/html; charset=utf-8">
 </HEAD>
 <body>
 <form  id="form" method="POST" action="${pageContext.request.contextPath}/xssLogin">
-    <input type="text" name="username" value="${username}"/><br>
-    <input type="text" name="password" /><br>
+    <label>
+<textarea name="dynamicHTML">
+
+    </textarea>
+    </label>
     <input type="submit">
 </form>
 </body>

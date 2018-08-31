@@ -3,14 +3,15 @@
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
-    <TITLE>XSSTEST</TITLE>
+    <TITLE>DynamicProgram</TITLE>
     <META NAME="Generator" CONTENT="7WX/AOP Framework">
     <META http-equiv="content-type" content="text/html; charset=utf-8">
 </HEAD>
 <body>
 <form  id="form" method="POST" action="${pageContext.request.contextPath}/xssLogin">
-    <input type="text" name="username" value="${username}"/><br>
-    <input type="text" name="password" /><br>
+    <textarea name="dynamicHTML">
+
+    </textarea>
     <input type="submit">
 </form>
 </body>

@@ -11,11 +11,11 @@ import javax.servlet.http.HttpSession;
  * @Author Create by junwei.liang on 2018/8/19
  */
 @Controller
-@RequestMapping(value="test")
-public class HealthCheck {
+@RequestMapping(value="admin")
+public class LoginController {
     public static final String HEALTH_JSP="healthCheck";
 
-    @RequestMapping(value="health")
+    @RequestMapping(value="login")
     public String health(HttpServletRequest request){
         HttpSession session = request.getSession();
         session.setAttribute("test","test");

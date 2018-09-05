@@ -6,7 +6,7 @@
     <TITLE>登录</TITLE>
     <META NAME="Generator" CONTENT="7WX/AOP Framework">
     <META http-equiv="content-type" content="text/html; charset=utf-8">
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
 </HEAD>
 <body>
 <form>
@@ -18,18 +18,19 @@
 </body>
 <script>
     function loginAdmin() {
-        var empname = $("#empname").value();
-        var password = $("#password").value();
+        var empname = $("#empname").val();
+        var password = $("#password").val();
         $.ajax({
             type: 'POST',
-            url: "${pageContext.request.contextPath}/admin/login",
+            url: "${pageContext.request.contextPath}/login/doLogin",
             data: {
-                "username":username,
+                "empname":empname,
                 "password":password
             },
             success: function (data) {
-                if(data.code=1){
-                    window.location.href("${pageContext.request.contextPath}/admin/index");
+                alert(data.code);
+                if(data.code==1){
+                    window.location.href = "${pageContext.request.contextPath}/admin/index";
                 }else{
                     $("#password").clear();
                     alert("账户或密码不正确");

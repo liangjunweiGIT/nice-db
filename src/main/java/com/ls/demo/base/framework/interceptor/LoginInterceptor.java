@@ -11,10 +11,10 @@ import javax.servlet.http.HttpSession;
  * @Description:
  * @Author Created by liangjunwei on 2018/8/31 18:06
  */
-public class LoginInterceptor implements HandlerInterceptor{
+public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        HttpSession session = httpServletRequest.getSession();
+        /*HttpSession session = httpServletRequest.getSession();
         String user = (String) session.getAttribute("empname"); //获取登录的session信息
         if(user!=null){
             return true;
@@ -22,7 +22,9 @@ public class LoginInterceptor implements HandlerInterceptor{
         else{
             httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+"/login/loginPage");  //未登录自动跳转界面
             return false;
-        }
+        }*/
+
+        return true;
     }
 
     @Override

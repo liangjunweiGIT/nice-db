@@ -15,7 +15,7 @@ import java.util.List;
  * @Description
  * @Author Create by junwei.liang on 2018/8/20
  */
-@Controller
+@Controller("tet")
 public class TestController {
 
     private static final String XSS_TEST_JSP="xssTest";
